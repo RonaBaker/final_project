@@ -1,0 +1,27 @@
+
+input[type="file"] {
+    visibility: hidden;
+}
+
+.image-preview {
+    height: 5rem;
+    margin: 1rem 0;
+}
+
+.image-preview img {
+    height: 100%;
+}
+
+
+.filePicker-btn-wrapper {
+    margin-top: 70px;
+}
+
+.content-wrapper {
+    padding-top: 150px;
+}
+
+.image-preview-wrapper {
+    display: flex;
+    flex-direction: row;
+}

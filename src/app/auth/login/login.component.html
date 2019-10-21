@@ -1,0 +1,17 @@
+<div class="content-wrapper form-wrapper">
+    <h1 class="form-header">{{ 'LOGIN' | translate }}</h1>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input matInput [placeholder]="'EMAIL' | translate" id="email" name="email" type="email" [(ngModel)]="email"
+                #emailInput="ngModel" required email>
+            <mat-error *ngIf="emailInput.touched && emailInput.invalid">Invalid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [placeholder]="'PASSWORD' | translate" id="password" name="password" type="password" [(ngModel)]="password"
+                required>
+        </mat-form-field>
+        <mat-error class="authentication-error">{{ errorMsg }}</mat-error>
+        <button mat-button [disabled]="!loginForm.form.valid" type="submit">{{ 'LOGIN' | translate }}</button>
+    </form>
+</div>

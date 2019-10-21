@@ -1,0 +1,29 @@
+<div class="card-wrapper">
+        <mat-card>
+                <mat-card-header>
+                        <img mat-card-avatar [src]="tweet.avatarUrl">
+                        <mat-card-title [routerLink]="['/users', tweet.username]">{{ tweet.username }}</mat-card-title>
+                        <mat-card-subtitle>{{ tweet.date }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                        <p>{{ tweet.content }}</p>
+                </mat-card-content>
+                <div class="stars-view" *ngIf="!isLoggedIn()">
+                        <p>{{ tweet.stars }}</p>
+                        <mat-icon>star</mat-icon>
+                </div>
+                <mat-card-actions *ngIf="isLoggedIn()">
+                        <p>{{ tweet.stars }}</p>
+                        <button mat-button *ngIf="isLoggedIn()">
+                                <mat-icon [color]="starredByMe ? 'primary' : null" (click)="starToggle()">star
+                                </mat-icon>
+                        </button>
+                        <button mat-button *ngIf="checkMatchUserTweet()" (click)="openRemoveDialog()">
+                                <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-button (click)="openReplyDialog()">
+                                <mat-icon>reply</mat-icon>
+                        </button>
+                </mat-card-actions>
+        </mat-card>
+</div>

@@ -1,0 +1,43 @@
+.profile-wrapper {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.profile-wrapper > * {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .profile-wrapper {
+        width: 90%; 
+    }
+}
+
+@media (min-width: 600px) {
+    .profile-wrapper {
+        width: 50%; 
+    }
+}
+
+img {
+    width: 60px;
+    height: 60px;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+.no-tweets {
+    color: darkgray;
+    text-align: center;
+}
+
+mat-card {
+    background: #fafafa;
+}

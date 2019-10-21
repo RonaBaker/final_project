@@ -1,0 +1,14 @@
+<div class="profile-wrapper" *ngIf="(user | async); let u">
+    <mat-card>
+        <mat-card-header>
+            <img mat-card-avatar [src]="u.avatarUrl">
+            <mat-card-title>{{u.username}}</mat-card-title>
+            <mat-card-subtitle>Last login: {{ u.lastLogin }}</mat-card-subtitle>
+            <mat-card-subtitle>Registration: {{ u.registrationDate }}</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+    <app-message-item *ngFor="let tweet of (userTweets | async)" [tweet]="tweet"></app-message-item>
+    <div class="no-tweets" *ngIf="(userTweets | async).length === 0">
+        No new Tweets
+    </div>
+</div>

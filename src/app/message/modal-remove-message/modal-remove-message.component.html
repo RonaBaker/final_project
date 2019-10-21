@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+        <p>{{ 'REMOVE_MSG' | translate }}</p>
+</div>
+<div mat-dialog-actions>
+        <button mat-button (click)="closeModalWindow()">{{ 'CANCEL_BTN' | translate }}</button>
+        <button mat-button (click)="removeTweet(); closeModalWindow()" cdkFocusInitial>{{ 'REMOVE' | translate }}</button>
+</div>

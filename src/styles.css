@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+body, html{
+    font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+.content-wrapper {
+    padding-top: 60px;
+}
+
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 4px !important;
+    padding: 0 6px !important;
+    size: small;
+}
+
+
+.form-wrapper {
+    padding-top: 150px ;
+}
+
+form > * {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.form-header {
+    margin: auto;
+    text-align: center;
+}
+
+.mat-dialog-container {
+    background: #fafafa !important;
+}
+
+@media (max-width: 500px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media (min-width: 500px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media (min-width: 700px) {
+    form {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1000px) {
+    form {
+        width: 30%;
+    }
+}
+
+mat-input-element {
+    overflow: hidden;
+}

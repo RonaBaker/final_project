@@ -1,0 +1,36 @@
+
+.content-wrapper{
+    padding-top: 100px;
+}
+
+.home-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.home-content-wrapper > * {
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .home-content-wrapper {
+        width: 90%; 
+    }
+}
+
+@media (min-width: 700px) {
+    .home-content-wrapper {
+        width: 50%; 
+    }
+}
+
+.line-spacer {
+    margin-top: 1em;
+    border: none;
+    border-bottom: solid 1px darkgrey;
+}
+
+app-message-list {
+    margin-bottom: 100px;
+}

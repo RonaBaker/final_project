@@ -1,0 +1,18 @@
+{
+    "HOME": "Inicio",
+    "REGISTRATION" : "Regístrate",
+    "REGISTER" : "Regístrate",
+    "LOGIN" : "Inicia sesión",
+    "LOGOUT" : "Cerrar sesión",
+    "EMAIL" : "Correo electrónico",
+    "PASSWORD" : "Contraseña",
+    "USERNAME" : "Nombre de usuario",
+    "POST_PLASEHOLDER" : "¿qué está pasando?",
+    "MODAL_POST_PLACEHOLDER" : "Twittear tu respuesta",
+    "TWEET" : "Twittear",
+    "REMOVE" : "Eliminar",
+    "REMOVE_MSG" : "¿Estás seguro de que deseas eliminar tu tweet?",
+    "CANCEL_BTN" : "Cancelar",
+    "PROFILE_PICTURE" : "Foto de perfil (Opcional)"
+
+}

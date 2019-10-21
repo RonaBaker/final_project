@@ -1,0 +1,5 @@
+<div class="content-wrapper home-content-wrapper">
+    <app-message-post *ngIf="isLoggedIn()" [tweetPlaceHolder]="'POST_PLASEHOLDER' | translate"></app-message-post>
+    <div class="line-spacer" *ngIf="isLoggedIn()"></div>
+    <app-message-list></app-message-list>
+</div>

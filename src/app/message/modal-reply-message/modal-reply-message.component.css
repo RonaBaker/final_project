@@ -1,0 +1,15 @@
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+mat-icon {
+    top: 0;
+    right: 0;
+}
+mat-card {
+    background: #fafafa;
+}
+
+P {
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,11 @@
+<mat-card mat-dialog-content>
+    <mat-card-header>
+        <img mat-card-avatar [src]="tweet.avatarUrl">
+        <mat-card-title>{{ tweet.username }}</mat-card-title>
+        <mat-card-subtitle>{{ tweet.date }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{ tweet.content }}</p>
+    </mat-card-content>
+    <app-message-post (close)="closeModalWindow()" [tweetPlaceHolder]="'MODAL_POST_PLACEHOLDER' | translate"></app-message-post>
+</mat-card>

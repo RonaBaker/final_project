@@ -1,0 +1,16 @@
+<div class="tweet-box">
+        <mat-card class="input-area">
+            <mat-card-header>
+                <div *ngIf="user | async; let u">
+                    <img mat-card-avatar [src]="u.avatarUrl">
+                </div>
+            </mat-card-header>
+            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" [(ngModel)]="tweetContent"
+                [placeholder]=tweetPlaceHolder #inputRef></textarea>
+        </mat-card>
+    <div class="input-action">
+        <mat-hint>{{ inputRef.value.length }} / {{ maxInputLength }}</mat-hint>
+        <button mat-flat-button color="primary" [disabled]="!inputRef.value.length > 0 || inputRef.value.length > 240"
+            (click)="postTweet()">{{ 'TWEET' | translate }}</button>
+    </div>
+</div>

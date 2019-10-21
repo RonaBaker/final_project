@@ -1,0 +1,4 @@
+<div class="no-tweets" *ngIf="(tweets | async).length === 0">
+    No new Tweets
+</div>
+<app-message-item *ngFor="let tweet of (tweets | async)" [tweet]="tweet"></app-message-item>

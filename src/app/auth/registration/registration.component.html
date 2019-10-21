@@ -1,0 +1,51 @@
+<div class="content-wrapper form-wrapper">
+        <h1 class="form-header">{{ 'REGISTRATION' | translate }}</h1>
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                <mat-form-field>
+                        <input matInput [placeholder]="'EMAIL' | translate" id="email" name="email" type="email" formControlName="email"
+                                email>
+                        <mat-error *ngIf="emailForm.invalid && (emailForm.dirty || emailForm.touched)">
+                                <mat-error *ngIf="emailForm.errors?.required">Email is required</mat-error>
+                                <mat-error *ngIf="emailForm.errors?.email">Invalid email</mat-error>
+                        </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                        <input matInput [placeholder]="'USERNAME' | translate" id="username" name="username" type="text"
+                                formControlName="username">
+                        <mat-error *ngIf="usernameForm.invalid && (usernameForm.dirty || usernameForm.touched)">
+                                <mat-error *ngIf="usernameForm.errors?.required">Username is required</mat-error>
+                        </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                        <input matInput [placeholder]="'PASSWORD' | translate" id="password" name="password" type="password"
+                                formControlName="password">
+                        <mat-error *ngIf="passwordForm.invalid && (passwordForm.dirty || passwordForm.touched)">
+                                <mat-error *ngIf="passwordForm.errors?.required">Password required</mat-error>
+                                <mat-error *ngIf="passwordForm.errors?.minlength">Password must be at least 8 characters
+                                </mat-error>
+                                <mat-error *ngIf="passwordForm.errors?.capitalLetter">Password needs to have at least
+                                        one capital letter</mat-error>
+                                <mat-error *ngIf="passwordForm.errors?.numberLetter">Password needs to have at least one
+                                        number</mat-error>
+
+                        </mat-error>
+                </mat-form-field>
+                <mat-error>{{ errorMsg }}</mat-error>
+                <div class="filePicker-btn-wrapper">
+                        <button mat-stroked-button type="button" (click)="filePicker.click()">{{ 'PROFILE_PICTURE' | translate }}</button>
+                        <input type="file" #filePicker (change)="onImgPicked($event)">
+                </div>
+                <div class="image-preview-wrapper">
+                        <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && imageForm.valid">
+                                <img [src]=imagePreview alt="My Profile Picture">
+                        </div>
+                        <button mat-button *ngIf="imagePreview" matSuffix mat-icon-button
+                                (click)="removeImage(); filePicker.value = null">
+                                <mat-icon>close</mat-icon>
+                        </button>
+                </div>
+                <button mat-button type="submit">{{ 'REGISTER' | translate}}</button>
+        </form>
+</div>
